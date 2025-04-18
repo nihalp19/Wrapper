@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+@app.get("/health")
 async def health_check():
     return {"status": "Backend is running"}
 
