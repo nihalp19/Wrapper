@@ -10,7 +10,7 @@ load_dotenv()
 VAPI_BASE_URL = "https://api.vapi.ai/assistant"
 print("VAPI_API_KEY:", os.getenv("VAPI_API_KEY"))
 
-VAPI_API_KEY = os.getenv("VAPI_API_KEY")  # changed to variable name
+VAPI_API_KEY = os.getenv("VAPI_API_KEY") 
 
 def create_vapi_agent(request: AgentCreateRequest):
     """Create agent using Vapi.ai API"""
@@ -22,13 +22,13 @@ def create_vapi_agent(request: AgentCreateRequest):
     payload = {
     "name": request.agent_name,
     "model": request.model,
-    "voice": "jennifer-playht",  # required by Vapi
+    "voice": "jennifer-playht", 
     "serverUrl": request.webhook_url
     }
     
     try:
         response = requests.post(
-            VAPI_BASE_URL, #Correct URL
+            VAPI_BASE_URL, 
             headers=headers,
             json=payload
         )

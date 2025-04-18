@@ -5,7 +5,7 @@ from app.services.vapi import create_vapi_agent
 from app.services.retell import create_retell_agent
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables
+load_dotenv()  
 
 app = FastAPI()
 
