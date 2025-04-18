@@ -18,6 +18,9 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def health_check():
+    return {"status": "Backend is running"}
 
 @app.post("/create-agent")
 async def create_agent(request: AgentCreateRequest):
